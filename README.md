@@ -6,7 +6,7 @@
 <br/>
 
 ### AI Programming Study with PNU!  
-- Basic Python Grammer  
+- [Basic Python Grammer](https://github.com/Jinseop-Sim/Python-Study)
 
 
 
