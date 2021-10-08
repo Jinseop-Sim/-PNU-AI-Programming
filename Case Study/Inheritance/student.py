@@ -13,9 +13,6 @@ class Student:
     def getName(self):
         return self._name
 
-    def __str__(self):
-        return self._name + "\t" + self.calcSemGrade()
-
 class LGStudent(Student):
     def __init__(self, name = "", midterm = 0, final = 0):
         super().__init__(name, midterm, final)
@@ -31,13 +28,22 @@ class LGStudent(Student):
             return "D"
         else:
             return "F"
-
+    def __str__(self):
+        return self._name + "\t" + self.calcSemGrade() + "\tFull Time Student"
+    
 class PFStudent(Student):
-    def __init__(self, name = "", midterm = 0, final = 0):
+    def __init__(self, name = "", midterm = 0, final = 0, fullTime = 0):
         super().__init__(name, midterm, final)
+        self._fullTime = fullTime
     def calcSemGrade(self):
         average = round((self._midterm + self._final) / 2)
         if average >= 60:
             return "Pass"
         else:
             return "Fail"
+    def __str__(self):
+        if self._fullTime:
+            status = "Full time student"
+        else:
+            status = "Part-time student"
+        return self._name + "\t" + self.calcSemGrade() + "\t" + status
