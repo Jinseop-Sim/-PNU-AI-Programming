@@ -18,7 +18,7 @@ def obtainListOfStudents():
     return listOfStudents
 
 def displayResults(listOfStudents):
-    print("\nNAME\tGRADE")
+    print("\nNAME\tGRADE\tSTATUS")
     listOfStudents.sort(key=lambda x: x.getName())
     for pupil in listOfStudents:
         print(pupil)
