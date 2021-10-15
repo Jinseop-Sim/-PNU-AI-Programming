@@ -120,5 +120,15 @@ plt.show()
 import numpy as np
 import matplotlib.pyplot as plt
 
+def gaussian(x):
+    return np.exp(-(0.5-x)**2/1.5)
+# gaussian = lambda x: np.exp(-(0.5-x)**2/1.5) 이렇게 함수를 정의할 수도 있다. 고급 표현법.
+x = np.arange(-2, 2.5, 0.01)
+y = gaussian(x)
 
+plt.plot(x, y)
+plt.title('Gaussian Function')
+plt.show()
 ```
+- 위와 같이 보통 Numpy와 같이 사용하게 된다.
+- 위의 예제는 Gaussian Function 그래프를 pyplot으로 그린 예제이다.
