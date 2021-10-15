@@ -100,3 +100,25 @@ print(b) # 2행 4열의 3 ~ 9 사이 Random Integer을 제공해준다.
 ```
 - ```np.random.rand(size)``` method는 0과 1사이의 무작위 실수를 size에 맞게 Matrix에 넣어 뽑아내준다.
 - ```np.random.randint(begin, end, size)``` method는 begin ~ end 사이의 무작위 정수를 size에 맞는 Matrix에 넣어준다.
+
+## Matplot Library
+### Pyplot module
+```python
+from matplotlib import pyplot as plt
+
+plt.plot([1,2,3], [1,4,9]) # x값과 y값을 각각 대응 
+plt.plot([2,3,4], [5,6,7]) # x값과 y값을 각각 대응
+plt.xlabel('Sequence') # X축의 이름
+plt.ylabel('Time(sec)') # Y축의 이름
+plt.title('Experimental result') # 제목
+plt.legend(['Mouse', 'Cat']) # 범주
+plt.show()
+```
+- 위와 같이 기본적으로 함수 그래프를 표현할 수 있는 모듈이다.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+```
