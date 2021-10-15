@@ -37,8 +37,11 @@
 - Example : N-Queens Problem  
   ![N-Queen](https://user-images.githubusercontent.com/71700079/137450491-254adf45-66af-4cd9-9d48-20163753a372.PNG)  
   - Conventional하게 푼다면 BackTracking을 이용해서 Recursion으로 풀어야 하는 유명한 문제이다.
-  - 하지만 Hill Climbing Algorithm을 이용해서 다음과 같이 해결한다.
-    1. 
+  - 하지만 Hill Climbing Algorithm을 이용해서 다음과 같이 해결한다.  
+    1. Queen들은 Column으로만 한 칸씩 움직일 수 있다는 규칙을 만든다.
+    2. 하나씩 옮기며 Queen 끼리 충돌이 있는 횟수 h를 기록해나간다.
+    3. 그 중 가장 h가 작은 자리에 queen을 위치시킨다.  '
+ 
 ### Stochastic Hill Climbing
 
 ### First-Choice Hill Climbing
