@@ -26,9 +26,21 @@
 - 무한하거나 아주 큰 공간에서 그나마 합리적인 해를 찾아낼 수 있다.
 ## Hill Climbing Algorithm
 > Local Search Algorithm의 대표적인 것들 중 하나인 언덕 등반 알고리즘이다.  
-> Local Search Algorithm은 순수 최적화 문제를 해결할 때 매우 유용하며, 
-### Stochastic Algorithm
+- 일명 Steepest Ascent 알고리즘이다.  
+![Hill](https://user-images.githubusercontent.com/71700079/137448769-bd56f3a1-7209-4256-9cf0-f306be521bcc.PNG)  
+- 위의 그림을 보면 Global Max, Local Max 두 가지의 정상이 존재한다.
+  - Global Maximum : 정말 이 문제에서 Conventional Algorithm을 통해 구할 수 있는 최적의 해이다.
+  - Local Maximum : 최적의 해는 아니지만 빠르게 구할 수 있는 최선의 해이다.
+- __Hill Climbing Algorithm__ 은 주변이 안개로 자욱한 산을 등반하는 것과 같다. 자신의 주변에 올라갈 곳이 있나 없나만 확인한다는 말이다.
+- 현재 Node의 Successor(후임자) 중에서 Best State가 현재 Node보다 더 좋다면, Succesor로 이동하는 알고리즘이다.
+- 더 이상 자신보다 좋은 Successor이 나오지 않으면 종료한다.
+- Example : N-Queens Problem  
+  ![N-Queen](https://user-images.githubusercontent.com/71700079/137450491-254adf45-66af-4cd9-9d48-20163753a372.PNG)  
+  - Conventional하게 푼다면 BackTracking을 이용해서 Recursion으로 풀어야 하는 유명한 문제이다.
+  - 하지만 Hill Climbing Algorithm을 이용해서 다음과 같이 해결한다.
+    1. 
+### Stochastic Hill Climbing
 
-### First 
+### First-Choice Hill Climbing
 
-### Random State Algorithm
+### Random State Hill Climbing
