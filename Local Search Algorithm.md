@@ -62,7 +62,7 @@
 - 혹시 그 중에 Global Maximum에 도착하는 경우의 수가 생길 수도 있기 때문이다.
 - 이 방식 또한 운에 의존하는 방식이라고 볼 수 있겠다.
 
-## Continuous State Spaces
+### Continuous State Spaces
 > Gradient Method(Hill Climbing)는 기울기에 따라 값을 Update 했었다.  
 > Maximize 일 경우 기울기가 증가하는 쪽으로, Minimize 일 경우 기울기가 감소하는 쪽으로 값을 결정했다.  
 - x = x +/- (a X df(x)/dx) ==> df(x)/dx는 __Gradient Vector__, 편미분 값이다.
@@ -74,3 +74,13 @@
   - f(w) = w^2+1, f'(w) = 2w, initial value w = 4, step size(a) = 0.1
   - __w = w - af'(w)__ 를 Update 식으로 삼으므로, 처음은 4 - (0.1 x 2 x 4) = 3.2
   - 다음은, 3.2 - (0.1 x 2 x 3.2) = 2.56 ... 이런 식으로 계속 Critical Point가 나올 때 까지 반복한다.
+  - 우리가 Heuristic하게 정해놓은 __Threshold EPSILON___ 보다 W의 변화량이 작아지면, 이정도면 Critical Point에 가깝겠다. 하고 판단할 수 있다.
+
+## Simulated Annealing Search
+- Idea : __Hill climbing Algorithm__ 의 효율성 + Random Walk의 완전성을 결합한 방식이다.
+  - __Hill Climbing Algorithm__ 은 Local Maxima나 Minima에 갇히면 탈출하지 못하는 방식의 알고리즘이다.
+  - 따라서 Random Walk의 __Bad Moves__ 즉, 우리가 원하지 않은 방향으로 움직일 수도 있는 특성을 허용해서 탈출을 유도한다.
+- Analogy With Annealing(담금질)
+  - 고정된 값 T(온도)에 대해서 State의 이동확률은 __Boltzman Distribution(볼츠만 분포)__ 에 의해 결정된다.
+  - 온도가 높아지면 확률이 낮아지고, 온도가 낮아지면 확률이 높아진다.
+  - 온도가 충분히 천천히 감소할 경우, 항상 Best State에 도달한다.
