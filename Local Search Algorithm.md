@@ -74,7 +74,7 @@
   - f(w) = w^2+1, f'(w) = 2w, initial value w = 4, step size(a) = 0.1
   - __w = w - af'(w)__ 를 Update 식으로 삼으므로, 처음은 4 - (0.1 x 2 x 4) = 3.2
   - 다음은, 3.2 - (0.1 x 2 x 3.2) = 2.56 ... 이런 식으로 계속 Critical Point가 나올 때 까지 반복한다.
-  - 우리가 Heuristic하게 정해놓은 __Threshold EPSILON___ 보다 W의 변화량이 작아지면, 이정도면 Critical Point에 가깝겠다. 하고 판단할 수 있다.
+  - 우리가 Heuristic하게 정해놓은 __Threshold EPSILON__ 보다 W의 변화량이 작아지면, 이정도면 Critical Point에 가깝겠다. 하고 판단할 수 있다.
 
 ## Simulated Annealing Search
 - Idea : __Hill climbing Algorithm__ 의 효율성 + Random Walk의 완전성을 결합한 방식이다.
