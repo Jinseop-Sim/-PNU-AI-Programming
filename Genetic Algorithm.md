@@ -7,7 +7,7 @@
 - 각 개인은 __Fitness function(적자생존)__ 에 의해서 평가된다.
   - 즉, Fitness score에 의거하여 확률을 부여해 Reproduction 할 개인을 선택하게 된다.
 - Local Search Algorithm은 Specific Heuristics를 전혀 사용하지 않았지만
-  - Simulated Annealing과 Genetic Algorithm은 __Meta-level Heuristic__ 을 사용한다! ==> Metaheuristic Algorithm
+  - Simulated Annealing과 Genetic Algorithm은 __Meta-level Heuristic__ 을 사용한다! ==> __Metaheuristic Algorithm__
 
 ## 동작
 - Crossover : Chromosome의 특정 구간을 잘라 Pair와 교환한다.
