@@ -66,21 +66,26 @@
 > Gradient Method(Hill Climbing)는 기울기에 따라 값을 Update 했었다.  
 > Maximize 일 경우 기울기가 증가하는 쪽으로, Minimize 일 경우 기울기가 감소하는 쪽으로 값을 결정했다.  
 - x = x +/- (a X df(x)/dx) ==> df(x)/dx는 __Gradient Vector__, 편미분 값이다.
-  - 그 계수인 a는 너무 작아지면 너~무 많은 단계를 거쳐야해서 비효율적이다.
-  - 반대로 너무 커지면, __Overshoot__ 이 발생하고 아예 엉뚱한 방향으로 가버릴 수도 있다. (사진 첨부)
+  - 그 계수인 a는 너무 작아지면 너~무 많은 연산 횟수를 거쳐야해서 비효율적이다.
+  - 반대로 너무 커지면, __Overshoot__ 이 발생하고 아예 엉뚱한 방향으로 가버릴 수도 있다.  
+  ![124](https://user-images.githubusercontent.com/71700079/140735643-e66cca44-ec02-433b-b56f-7aa98a21eb2b.jpg)  
   - a 값에 대한 결정은 __Heuristic__ 하게 경험에 의해서 시도를 해본 뒤 결정된다.
   - df(x)/dx가 0이 되면, __Critical Point__ 라고 하게 된다. 이는 Local minimum과 Local maximum등의 변화량이 0인 곳이다.
 - Example : Gradient Descent
   - f(w) = w^2+1, f'(w) = 2w, initial value w = 4, step size(a) = 0.1
   - __w = w - af'(w)__ 를 Update 식으로 삼으므로, 처음은 4 - (0.1 x 2 x 4) = 3.2
   - 다음은, 3.2 - (0.1 x 2 x 3.2) = 2.56 ... 이런 식으로 계속 Critical Point가 나올 때 까지 반복한다.
-  - 우리가 Heuristic하게 정해놓은 __Threshold EPSILON__ 보다 W의 변화량이 작아지면, 이정도면 Critical Point에 가깝겠다. 하고 판단할 수 있다.
+  - 우리가 Heuristic하게 정해놓은 __Threshold EPSILON__ 보다 W의 변화량이 작아지면, 이정도면 Critical Point에 가깝겠다. 하고 판단할 수 있다.  
+  ![image](https://user-images.githubusercontent.com/71700079/140735740-f7596e91-ae49-48b3-ac13-7506974afc80.png)  
 
 ## Simulated Annealing Search
 - Idea : __Hill climbing Algorithm__ 의 효율성 + Random Walk의 완전성을 결합한 방식이다.
   - __Hill Climbing Algorithm__ 은 Local Maxima나 Minima에 갇히면 탈출하지 못하는 방식의 알고리즘이다.
   - 따라서 Random Walk의 __Bad Moves__ 즉, 우리가 원하지 않은 방향으로 움직일 수도 있는 특성을 허용해서 탈출을 유도한다.
 - Analogy With Annealing(담금질)
-  - 고정된 값 T(온도)에 대해서 State의 이동확률은 __Boltzman Distribution(볼츠만 분포)__ 에 의해 결정된다.
-  - 온도가 높아지면 확률이 낮아지고, 온도가 낮아지면 확률이 높아진다.
-  - 온도가 충분히 천천히 감소할 경우, 항상 Best State에 도달한다.
+  - 고정된 값 T(온도)에 대해서 State의 이동확률은 __Boltzman Distribution(볼츠만 분포)__ 에 의해 결정된다. ![boltzamn](https://user-images.githubusercontent.com/71700079/140736112-0509cf22-53b1-43af-8d72-45587274adaa.jpg)  
+  - T(온도)가 높아지면 확률이 낮아지고, 온도가 낮아지면 확률이 높아진다.
+  - T(온도)가 충분히 천천히 감소할 경우, 항상 Best State에 도달한다.
+  - T(온도)는 __Annealing Schedule(Control the randomness)__ 에 의해 결정된다.
+  - 온도가 높을 수록 확률에 의존하는 __Bad moves__ 의 확률이 올라간다.
+  - T = 0일 땐, __First Choice Hill Climbing__ 과 동일하다.
