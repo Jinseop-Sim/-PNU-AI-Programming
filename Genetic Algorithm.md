@@ -15,4 +15,5 @@
   - Crossover이 점점 진행될 수록 Fitness score의 변동폭은 점점 줄어든다.
   - Crossover의 강점은, 확률에 의해 Pair의 높은 Fitness score을 가진 부분끼리 결합을 하게 되는 경우, 최고 점수를 보장한다.
 - Mutation : 매우 낮은 확률로 랜덤한 Mutation이 발생할 수 있다.
-- Example : N-Queens(사진첨부)
+- Example : N-Queens  
+![Genetic N queens](https://user-images.githubusercontent.com/71700079/140737036-20bbd277-7a6f-4c4e-a119-ff15379d84a9.jpg)  
