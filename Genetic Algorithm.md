@@ -17,3 +17,12 @@
 - Mutation : 매우 낮은 확률로 랜덤한 Mutation이 발생할 수 있다.
 - Example : N-Queens  
 ![Genetic N queens](https://user-images.githubusercontent.com/71700079/140737036-20bbd277-7a6f-4c4e-a119-ff15379d84a9.jpg)  
+
+- 부모(Parent)는 __Binary Tournament__ 에 의해 선택된다.
+  1. Population에서 2개의 state를 Random하게 선택한다.(__With Replacement__)
+  2. 둘 중 Fitness가 더 좋은 쪽을 Winner로 고른다.(동점일 시, Random하게)
+  - Uniform Crossover : 각 유전자에서 동전 던지기(Random)를 하여 부모를 선택한다.
+    - 이 때, Crossover이 발생하는 평균 횟수는 당연히 길이/2 가 된다. (동전 던지기는 1/2의 확률!)
+    - 하지만, 보통 0.5가 아닌 __p = 0.2__ 로 확률을 사용한다.
+  - Parent를 선택한 이후에, Crossover은 __Crossover Rate__ 에 따라 발생하는데, 보통 1에 가깝게 본다.(거의 Crossover 된다.)
+  - Bit-flip mutation : 각 Bit는 __Mutation Rate__ 에 의해 조그만 돌연변이를 일으킨다. 보통 1/길이의 확률로 발생하도록 한다.
