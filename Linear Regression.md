@@ -10,3 +10,5 @@
 ## Univariate Linear Regression
 
 ## Multivariate Linear Regression
+
+## Nearest Neighbor Models
