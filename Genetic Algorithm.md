@@ -25,4 +25,4 @@
     - 이 때, Crossover이 발생하는 평균 횟수는 당연히 길이/2 가 된다. (동전 던지기는 1/2의 확률!)
     - 하지만, 보통 0.5가 아닌 __p = 0.2__ 로 확률을 사용한다.
   - Parent를 선택한 이후에, Crossover은 __Crossover Rate__ 에 따라 발생하는데, 보통 1에 가깝게 본다.(거의 Crossover 된다.)
-  - Bit-flip mutation : 각 Bit는 __Mutation Rate__ 에 의해 조그만 돌연변이를 일으킨다. 보통 1/길이의 확률로 발생하도록 한다.
+  - Bit-flip mutation : 각 Bit는 __Mutation Rate__ 에 의해 조그만 돌연변이를 일으킨다.보통 1/길이의 확률로 발생하도록 한다.
