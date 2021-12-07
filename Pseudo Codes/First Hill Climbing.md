@@ -57,8 +57,8 @@ def Random Mutate(Current Object, Problem Object):
 ```python
 def Mutate(Current Object, i, DELTA, Problem Object)
   Copy Array = Current Object[:] # Slicing을 이용한 Current Object 배열 복사. 
-  Lower Bound = Problem Object[1][i] # 배열을 복사하는 이유는 원래 배열을 Mutate 할 수는 없기 때문이다.
-  Upper Bound = Problem Object[1][i] # 비교 대상을 만들기 위해 Mutate 하는 것!
+  Lower Bound = Problem Object[1][1][i] # 배열을 복사하는 이유는 원래 배열을 Mutate 할 수는 없기 때문이다.
+  Upper Bound = Problem Object[1][2][i] # 비교 대상을 만들기 위해 Mutate 하는 것!
   if Lower Bound <= (Copy Array[i] + DELTA) <= Upper Bound:
     Copy Array[i] += DELTA # Mutate를 위해 -DELTA +DELTA 변이.
   return Copy Array # 비교 대상을 Return 해준다.
