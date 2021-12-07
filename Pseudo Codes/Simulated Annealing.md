@@ -27,11 +27,11 @@ def Simulated Annealing(Problem Object):
     Temperature = Calculate Temperature(Temperature)
     i += 1 # 계산 횟수를 제한하기 위한 값
     if Temperature == 0 or i == Limit: break # 온도가 0이거나 계산 횟수가 한계에 도달하면 종료.
-    dE = Mutant Value - Current Value
+    dE = Mutant Value - Current Value # 둘의 차이 값을 온도로 나눈 것이 확률의 밑바탕이 될 것이다.
     if dE < 0:
       Current Object = Mutant
       Current Value = Mutant Value
-    elif random.uniform(0, 1) < e^(-dE / Temperature):
+    elif random.uniform(0, 1) < e^(-dE / Temperature): # 볼츠만 상수에 따라 Bad Walk를 한다.
       Current Object = Mutant
       Current Value = Mutant Value
     if Current Value < Best Value:
