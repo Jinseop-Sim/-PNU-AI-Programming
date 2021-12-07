@@ -2,6 +2,11 @@
 ---
 ## Summary
 - Stochastic Hill Climbing은 다음과 같이 동작한다.
+1. 다른 알고리즘들과 동일하게 초기 값을 배정한다.
+2. 여러 Mutants들 중 확률을 부여해서 값을 배정하도록 하기 위해 Mutants 배열을 생성한다.
+3. 확률적으로 더 나은 값이 나올 수도 있고 더 안 좋은 값이 나올 수도 있다.
+      - 이는 Local Minima(Maxima)에 갇힘을 방지해준다.
+4. 뽑은 다음 더 나은 값이면 바꿔주고, 이 과정을 반복하며 더 안좋은 값이 나오면 종료한다.
 
 ## Pseudo Code
 ### Stochastic Algorithm
