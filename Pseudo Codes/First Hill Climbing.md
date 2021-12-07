@@ -5,7 +5,7 @@
 1. 랜덤하게 시작 값을 배정한다.
 2. 그 값을 기준으로 그 값에서 빼고 더하고를 해본다(Mutate).
 3. 더 답에 가까운 쪽을 선택해서 현재 값을 바꾼다.
-4. 더 이상 Current보다 좋은게 나오지 않을 경우 Maxima(Minima)로 인정하고 종료한다.
+4. 정해진 limit 만큼 계산했는데도 더 이상 Current보다 좋은게 나오지 않을 경우 Maxima(Minima)로 인정하고 종료한다.
 
 ### Pseudo Functions
 ```python
