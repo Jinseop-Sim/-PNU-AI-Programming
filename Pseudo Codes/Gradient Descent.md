@@ -50,7 +50,7 @@ def Gradient(i, Current Object):
 ### Mutate by Gradient
 ```python
 def Mutate(Current Object, i, Step):
-  Copy Array = Current Object[:]
+  Copy Array = Current Object[:] # Copy를 하는 이유는 Current Object를 바꿔버리면, Current Object와 비교를 못하기 때문!
   Lower Bound = Problem[1][1][i]
   Upper Bound = Problem[1][2][i]
   if Lower Bound <= Copy Array[i] - Step <= Upper Bound:
