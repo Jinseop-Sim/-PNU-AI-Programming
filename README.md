@@ -1,18 +1,6 @@
-# <p align="center"> Machine Learning </p>
+# Computer vision practice repo
+부산대학교 머신러닝 강의 자료 및 실습 저장소입니다.
+> 부산대학교 송길태 교수님과 박진선 교수님의 강의 자료를 바탕으로 진행됩니다.  
+> 모든 강의 자료 및 코드의 출처는 송길태 교수과 박진선 교수님께 있습니다.  
 
-<p align="center">
-<img src="https://img.shields.io/badge/PYTHON-000000?style=for-the-badge&logo=Python&logoColor=yellow">
-</p>
-<br/>
-
-### AI Programming Study with PNU!  
-- [Basic Python Grammer](https://github.com/Jinseop-Sim/Python-Study)
-
-
-
-
-
-<p align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=Jinseop-Sim&show_icons=true&theme=gruvbox&hide=["issues"]">
-</p>
-
+실습 1 : Bank data classification
