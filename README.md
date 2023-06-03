@@ -4,3 +4,4 @@
 > 모든 강의 자료 및 코드의 출처는 송길태 교수과 박진선 교수님께 있습니다.  
 
 실습 1 : Bank data classification
+실습 2 : Deep Neural Network Implementation (iris data)
